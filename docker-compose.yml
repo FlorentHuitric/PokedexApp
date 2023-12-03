@@ -1,0 +1,11 @@
+version: '1.0'
+
+services:
+  frontend:
+    image: node:20-alpine
+    volumes:
+      - ./pokedex:/frontend
+    ports:
+      - "5173:5173"
+    working_dir: /frontend
+    command: npm run setup
